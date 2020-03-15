@@ -1,0 +1,24 @@
+
+apply plugin: 'java'
+apply plugin: 'application'
+apply from: '../base.gradle'
+
+ext.appdir0 = 'manga-search'
+apply from: '../tasks.gradle'
+
+repositories {
+    jcenter()
+}
+
+version = '.001'
+mainClassName = 'Main'
+
+dependencies {
+  [SQLITE, MY_UTILS].each { 
+    implementation(it)
+  } 
+}
+
+jar {
+  exclude '*.fxgraph'
+}

@@ -1,0 +1,13 @@
+apply plugin: 'java-library'
+apply from: '../base.gradle'
+
+version = 0.15
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+  compileOnly(MY_UTILS)
+  implementation (SLF_API, HPPC)
+}

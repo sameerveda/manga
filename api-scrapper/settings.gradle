@@ -1,0 +1,4 @@
+include ':api-models-helpers'
+project(':api-models-helpers').projectDir = file('../api-models-helpers')
+
+rootProject.name = 'api-scrapper'
